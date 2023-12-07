@@ -1,0 +1,17 @@
+img=imread('cameraman.tif');
+negativeImg=255-img;
+subplot(2,2,1);
+imshow(img);
+title('Original Image');
+subplot(2, 2, 2);
+imshow(negativeImg);
+title('Negative Image');
+logarithmicImg=im2double(img);
+logarithmicImg=1000*log(1+logarithmicImg);
+subplot(2,2,3);
+imshow(uint8(logarithmicImg));
+title('Logarithmic Transformation');
+powerTransformation=uint8(0.5*power(img,2));
+subplot(2,2,4);
+imshow(powerTransformation);
+title('Power Transformation');

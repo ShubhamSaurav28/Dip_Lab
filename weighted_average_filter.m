@@ -1,0 +1,11 @@
+A_gray = imread('cameraman.tif');
+weights = [1, 2, 1; 2, 4, 2; 1, 2, 1];
+weights = weights / sum(weights(:));
+weighted_average_filtered_image = imfilter(A_gray, weights);
+figure;
+subplot(1, 2, 1);
+imshow(A_gray);
+title('Grayscale Image');
+subplot(1, 2, 2);
+imshow(weighted_average_filtered_image);
+title('Weighted Average Filtered Image');

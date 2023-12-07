@@ -1,0 +1,16 @@
+custom_img=imread('cup.jpg');
+red_channel=custom_img(:,:,1);
+green_channel=custom_img(:,:,2);
+blue_channel=custom_img(:,:,3);
+subplot(2,2,1);
+imshow(custom_img);
+title('Original Image');
+subplot(2,2,2);
+imshow(red_channel);
+title('Red Channel');
+subplot(2,2,3);
+imshow(green_channel);
+title('Green Channel');
+subplot(2,2,4);
+imshow(blue_channel);
+title('Blue Channel');

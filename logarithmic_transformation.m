@@ -1,0 +1,13 @@
+  img = imread('cameraman.tif');
+  r = double(img);
+  C = 1;
+  S = C * log(1 + r);
+  T = 255/(C * log(256));
+  B = uint8(T * S);
+figure;
+subplot(1, 2, 1);
+imshow(img, []);
+title('Original Grayscale Image');
+subplot(1, 2, 2);
+imshow(B, []);
+title('Logarithmic Transformed Image');
